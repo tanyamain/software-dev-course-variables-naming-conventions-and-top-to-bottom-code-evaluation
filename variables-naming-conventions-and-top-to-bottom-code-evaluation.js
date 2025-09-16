@@ -24,9 +24,28 @@ Things to reflect on:
   
 */
 
-let a = "Alice";
-let b = 5;
-let c = 20;
-let d = a + " bought " + b + " items for $" + c + ".";
+// Removed ambiguous variable declarations and usage
 
-console.log(d);
+/* Renamed 'a' to a descriptive name */
+let customerName = "Alice";
+/* Renamed 'b' to reflect the number of items purchased */
+let itemCount = 5;
+/* Renamed 'c' to indicate the total cost of items */
+let totalCost = 20;
+/* Rename 'd' to describe the full message that will logged to the console */
+let purchaseMessage = customerName + " bought " + itemCount + " items for $" + totalCost + "."; 
+
+console.log(purchaseMessage);
+
+/* Added a variable to represent the price per item */
+let pricePerItem = totalCost / itemCount; 
+/* Added a variable to represent a thank you message */
+let thankYouMessage = "Thank you for shopping with us, " + customerName + "!";  
+
+console.log("Each item costs $" + pricePerItem + ".");
+console.log(thankYouMessage);
+
+/* Reflection:
+1. Meaningful variable names are crucial because they enhance code readability and maintainability. They help developers understand the purpose of a variable.
+2. Common pitfalls to avoid when naming variables include using overly generic names, abbreviations that are not widely understood, and inconsistent naming conventions.
+3. Clear variable names benefit team collaboration by making it easier for team members to understand each other's code, reducing the learning curve for new team members, and minimizing errors during code reviews.
